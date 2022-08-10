@@ -1,0 +1,401 @@
+/*共通スタイル*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-image: url('../img/paper.png');
+  background-size: contain;
+  overflow-x: hidden;
+}
+
+.container {
+  /* width: calc(100% - 32px); */
+  /* margin: 0 auto; */
+  /* display: flex; */
+  /* justify-content: space-between; */
+  margin-bottom: 4rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+}
+
+i {
+  cursor: pointer;
+}
+
+/*header*/
+
+header {
+  background: url("../img/wallpaperbetter.com_3840x2160.png") center / cover;
+  width: 100%;
+  height: 30vh;
+  /* position: relative; */
+  padding: 32px 0;
+}
+
+header .container {
+  width: calc(100% - 32px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.title {
+  display: flex;
+  height: 46px;
+  justify-content: center;
+}
+
+.sp-menu {
+  margin-left: auto;
+}
+
+.sp-menu #open {
+  font-size: 40px;
+  position: absolute;
+  top: -3px;
+  right: 18px;
+  /* line-height: 50px; */
+}
+
+.sp-menu #open.hide {
+  display: none;
+}
+
+/*メニューを開く*/
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255,255,255,0.95);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s;
+  z-index: 2;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 32px;
+  right: 18px;
+  font-size: 36px;
+}
+
+.overlay li {
+  margin-top: 24px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+}
+
+.overlay.show li:nth-child(1) {
+  transition-delay: .1s;
+}
+
+.overlay.show li:nth-child(2) {
+  transition-delay: .2s;
+}
+
+.overlay.show li:nth-child(3) {
+  transition-delay: .3s;
+}
+
+.overlay a {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  border: 2px solid #999;
+  border-radius: 4px;
+  line-height: 40px;
+  font-size: 16px;
+  background: rgb(103, 219, 255);
+}
+
+.overlay a:hover {
+  background: #f2f2f2;
+}
+
+.pc-menu {
+  display: none;
+}
+
+/* ul {
+  list-style: none;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  background-color: darksalmon;
+}
+li {
+  border-style: solid;
+  text-align: center;
+  margin-right: 30px;
+  margin-left: 30px;
+  height: 3.5rem;
+  padding-top: calc((50px - 24px) / 2 );
+}
+
+li:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.home{
+  background-color: rgb(240, 208, 140);
+}
+.cate{
+  background-color: rgb(240, 208, 140);
+}
+.prof{
+  background-color: rgb(240, 208, 140);
+} */
+/*画像*/
+
+.container .pic {
+  width: 95%;
+  height: 300px;
+  margin: 16px auto 16px;
+}
+
+.container .pic img {
+  width: 95%;
+  height: 300px;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.container .pic img.current {
+  opacity: 1;
+}
+/*main*/
+
+main {
+  width: calc(100% - 32px);
+  margin: 0 auto 4rem;
+  /* margin-bottom: 4rem; */
+  border: 1px solid #36f;
+  outline: 2px solid #36f;
+  outline-offset: 4px;
+  border-radius: 6px;
+  padding: .875rem;
+  position: relative;
+}
+
+#trigger {
+  width: 28vw;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: border-radius .5s;
+}
+
+#trigger.changed {
+  border-radius: 0%;
+}
+
+main h3 {
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  display: inline-block;
+  background-image: linear-gradient(transparent 50%,#ff6 50%);
+  padding-bottom: .25rem;
+}
+
+/* aside{
+  width: 26%;
+}
+.side-box {
+  margin-bottom: 4rem;
+  border: 1px solid #36f;
+  outline: 2px solid #36f;
+  outline-offset: 4px;
+  border-radius: 6px;
+  padding: .875rem;
+  position: relative;
+}
+.side-box h3 {
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+  text-align: center;
+  margin: .875rem 0 1.125rem;
+}
+.side-box img{
+  margin: 0 calc((95% - 88px) / 2);
+} */
+
+.btn {
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  background: #a794db;
+  box-shadow: 0 3px #9b75c0;
+  position: relative;
+  display: inline-block;
+  top: -2px;
+  padding: 10px 20px;
+}
+
+.btn:hover {
+  box-shadow: 0 1px #9b75c0;
+  top: 1px;
+}
+
+/*コピーライト*/
+.copyright {
+  background: #323435;
+  padding: 64px 0;
+  margin-top: 16px;
+  align-items: center;
+  display: flex;
+}
+
+.copyright small {
+  font-size: 14px;
+  color: #eee;
+  margin: 0 auto 0 8px;
+}
+
+.copyright a.sns {
+  width: 36px;
+  height: 36px;
+  margin-right: 8px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 36px;
+  background: rgb(39,38 ,38 );
+}
+
+.copyright i {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  color: #f2f2f2;
+}
+
+.copyright i::before {
+  line-height: 0;
+}
+
+.copyright a.twitter:hover {
+  background: #00b0ed;
+  color: #fff;
+  opacity: 1;
+}
+
+.copyright a.instagram:hover {
+  background: linear-gradient(45deg, rgba(254,212,117,1) 0%,rgba(229,61,93,1) 50%,rgba(194,49,134,1) 70%,rgba(156,56,187,1) 100%);
+  color: #fff;
+  opacity: 1;
+}
+
+.copyright a.youtube:hover {
+  background: #F00;
+  color: #fff;
+  opacity: 1;
+}
+
+#to_top {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+#to_top.scrolled {
+  opacity: 1;
+} 
+
+#to_top i {
+  font-size: 36px;
+  color: #51b8fc;
+}
+
+
+/*中間スクリーン用*/
+
+@media (min-width: 600px) and (max-width: 799px) {
+
+}
+
+/*大きいスクリーン用*/
+
+@media  (min-width: 800px) {
+  .sp-menu {
+    display: none;
+  }
+  .pc-menu {
+    display: block;
+    margin-left: auto;
+  }
+  .pc-menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  .pc-menu a {
+    width: 130px;
+    font-size: 16px;
+    border: 2px solid #999;
+    border-radius: 4px;
+    line-height: 40px;
+    text-align: center;
+    background: rgb(103, 219, 255);
+  }
+  .pc-menu a:hover {
+    background: rgb(171, 235, 255);
+  }
+  .pc-menu li + li {
+    margin-left: 30px;
+  }
+  /*大きい画像*/
+  .container .pic {
+    max-width: 1200px;
+  }
+  .container .pic img {
+    max-width: 1200px;
+  }
+  main {
+    max-width: 1200px;
+  }
+}
