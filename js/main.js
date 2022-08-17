@@ -10,6 +10,7 @@
   const onScrollObserver = new IntersectionObserver(onScrollCallback);
   
   let currentIndex = 0;
+
   function play() {
     setTimeout(() => {
       images[currentIndex].classList.remove('current');
