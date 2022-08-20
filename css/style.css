@@ -42,6 +42,27 @@ i {
   cursor: pointer;
 }
 
+.btn {
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  background: #a794db;
+  box-shadow: 0 3px #9b75c0;
+  position: relative;
+  display: inline-block;
+  top: -2px;
+  padding: 10px 20px;
+  user-select: none;
+}
+
+.btn:hover {
+  box-shadow: 0 1px #9b75c0;
+  cursor: pointer;
+  top: 1px;
+}
+
+
 /*header*/
 
 header {
@@ -217,10 +238,12 @@ main {
   border-radius: 6px;
   padding: .875rem;
   position: relative;
+  display: block;
+  height: auto;
 }
 
 #trigger {
-  width: 28vw;
+  width: 50vw;
   cursor: pointer;
   border-radius: 50%;
   transition: border-radius .5s;
@@ -237,6 +260,34 @@ main h3 {
   display: inline-block;
   background-image: linear-gradient(transparent 50%,#ff6 50%);
   padding-bottom: .25rem;
+}
+
+.btns {
+  position: relative;
+  /* outline: 1px solid red; */
+  height: 80px;
+}
+
+.btns .btn {
+  position: absolute;
+}
+
+.btn.apper,
+.reverse,
+.cont {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.reverse.apper,
+.cont.apper {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.reverse.apper {
+  top: 24px;
 }
 
 /* aside{
@@ -260,24 +311,6 @@ main h3 {
 .side-box img{
   margin: 0 calc((95% - 88px) / 2);
 } */
-
-.btn {
-  color: #fff;
-  font-size: 1.5rem;
-  border-radius: 5px;
-  text-decoration: none;
-  background: #a794db;
-  box-shadow: 0 3px #9b75c0;
-  position: relative;
-  display: inline-block;
-  top: -2px;
-  padding: 10px 20px;
-}
-
-.btn:hover {
-  box-shadow: 0 1px #9b75c0;
-  top: 1px;
-}
 
 /*コピーライト*/
 .copyright {
@@ -397,5 +430,8 @@ main h3 {
   }
   main {
     max-width: 1200px;
+  }
+  #trigger {
+    width: 28vw;
   }
 }
