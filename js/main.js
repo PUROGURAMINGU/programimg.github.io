@@ -6,6 +6,8 @@
   const overlay = document.querySelector('.overlay');
   const images = document.querySelectorAll('.pic img');
   const btn = document.querySelector('.btn');
+  const reverse = document.querySelector('.reverse');
+  const cont = document.querySelector('.cont');
   const toTop = document.getElementById('to_top');
   const onScrollObserver = new IntersectionObserver(onScrollCallback);
   
@@ -63,7 +65,15 @@
   document.getElementById('trigger').addEventListener('click', process);
   
   btn.addEventListener('click', () => {
-    btn.classList.toggle('appper');
+    btn.classList.add('apper');
+    reverse.classList.add('apper');
+    cont.classList.add('apper');
+  });
+
+  reverse.addEventListener('click', () => {
+    btn.classList.remove('apper');
+    reverse.classList.remove('apper');
+    cont.classList.remove('apper');
   });
 }
 
