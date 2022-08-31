@@ -1,7 +1,6 @@
 'use strict';
 
 {
-  const bttn = document.getElementById('bttn');
   const comment = document.getElementById('comment');
   const open = document.getElementById('open');
   const close = document.getElementById('close');
@@ -40,23 +39,6 @@
   onScrollObserver.observe(document.getElementById('target'));
   
   play();
-  
-  bttn.addEventListener('click', () => {
-    const n = Math.random();
-    if (n < 0.05) {
-      bttn.textContent = '大吉';
-      comment.textContent = 'とっても良いことがありそう!!';
-    } else if (n < 0.2) {
-      bttn.textContent = '中吉';
-      comment.textContent = '良いことがありそう!!';
-    } else if (n < 0.5) {
-      bttn.textContent = '末吉';
-      comment.textContent = 'まあまあ良いことがありそう!!';
-    } else {
-      bttn.textContent = '凶';
-      comment.textContent = '悪いことがありそう';
-    }
-  });
 
   toTop.addEventListener('click', e => {
     e.preventDefault();
