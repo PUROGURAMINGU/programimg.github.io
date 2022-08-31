@@ -23,6 +23,7 @@ h1 {
 
 p {
   margin-bottom: 8px;
+  display: inline-block;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -97,6 +98,7 @@ header .container {
   position: absolute;
   top: -3px;
   right: 18px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .sp-menu #open.hide {
@@ -130,6 +132,7 @@ header .container {
   top: 32px;
   right: 35px;
   font-size: 36px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .overlay li {
